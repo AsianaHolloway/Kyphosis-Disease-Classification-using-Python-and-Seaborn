@@ -93,7 +93,7 @@ sns.pairplot(
     diag_kind='hist',
     plot_kws={'alpha':0.85, 's':40, 'edgecolor':'white'}
 )
-
+```
 ## 🌈 Pairplot Result
 
 Observations:
