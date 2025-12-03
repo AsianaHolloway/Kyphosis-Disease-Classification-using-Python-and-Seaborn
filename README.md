@@ -18,6 +18,7 @@ The dataset contains records from 81 pediatric patients who underwent spinal sur
 | **Age**      | Age of the patient (in months)                         |
 | **Number**   | Number of vertebrae involved in the surgery            |
 | **Start**    | The number of the topmost vertebra operated on         |
+
 📊 Source: [Kyphosis Dataset on Kaggle](https://www.kaggle.com/abbasit/kyphosis-dataset)
 
 ## ⚙️ Code Walkthrough
