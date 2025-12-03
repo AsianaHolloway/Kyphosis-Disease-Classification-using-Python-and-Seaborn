@@ -1,6 +1,7 @@
 # Kyphosis Disease Classification using Python and Seaborn
 This project analyzes clinical risk factors for kyphosis using Python, Seaborn, and statistical correlation
-📘 Project Overview
+
+## 📘 Project Overview
 
 This project analyzes and classifies Kyphosis, an abnormal curvature of the spine that may occur after corrective spinal surgery in children.
 Using Python, Pandas, Seaborn, and Matplotlib, I performed data exploration, correlation analysis, and visualization to understand which features (Age, Number of vertebrae, Start position) influence the likelihood of kyphosis after surgery.
