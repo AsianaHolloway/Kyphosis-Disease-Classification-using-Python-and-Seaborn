@@ -23,8 +23,9 @@ The dataset contains records from 81 pediatric patients who underwent spinal sur
 
 I began by importing essential Python libraries for data analysis and visualization:
 
-"import pandas as pd"
-"import numpy as np"
+```python
+import pandas as pd
+import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import pointbiserialr
