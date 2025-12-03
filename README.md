@@ -30,6 +30,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy.stats import pointbiserialr
 
+```
 The dataset was uploaded and loaded into a Pandas DataFrame.
 I confirmed there were 81 rows and 4 columns and no missing values.
 
@@ -44,7 +45,9 @@ To understand the dataset better, I explored:
 - Class distribution
 
 - Basic statistics
+```python
 df.describe(include='all')
+```
 Findings:
 
 - 79% of cases showed kyphosis absent
@@ -59,10 +62,12 @@ Findings:
 
 To explore relationships between the target (Kyphosis) and numeric features,
 I encoded Kyphosis as binary (0 = absent, 1 = present) and calculated the correlation matrix.
+```python
 df_corr = df.copy()
 df_corr['Kyphosis_num'] = df_corr['Kyphosis'].map({'absent': 0, 'present': 1})
 corr = df_corr[['Kyphosis_num', 'Age', 'Number', 'Start']].corr()
 sns.heatmap(corr, annot=True, cmap='coolwarm', vmin=-1, vmax=1)
+```
 
 ## 🧩 Correlation Heatmap
 | Variable   | Correlation (r) | Direction           |
@@ -77,14 +82,17 @@ sns.heatmap(corr, annot=True, cmap='coolwarm', vmin=-1, vmax=1)
 4️⃣ Point-Biserial Correlation
 
 To confirm the relationships statistically, I used the pointbiserialr() test for continuous–binary correlation.
+```python
 for col in ['Age', 'Number', 'Start']:
     r, p = pointbiserialr(df_corr['Kyphosis_num'], df_corr[col])
     print(col, "r =", r, "| p =", p)
 This confirmed the same pattern seen in the heatmap.
+```
 
 5️⃣ Pairplot Visualization
 
 A pairplot helped visualize feature distributions and interactions across classes (absent vs. present).
+```python
 sns.pairplot(
     data=df,
     vars=['Age', 'Number', 'Start'],
